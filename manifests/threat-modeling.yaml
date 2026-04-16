@@ -1,0 +1,46 @@
+version: 1
+name: threat-modeling
+description: >
+  STRIDE/PASTA threat modeling via josemlopez/threat-modeling-toolkit. 9 sub-skills
+  covering init, threat enumeration, drift detection against a baseline snapshot,
+  compliance mapping, and reporting.
+
+  tm-drift is the standout — it classifies PR diffs against a prior threat-model
+  snapshot as benign / updates-existing-threats / requires-new-threats.
+
+skills:
+  - name: tm-init
+    repo: threat-modeling-toolkit
+    path: skills/tm-init
+
+  - name: tm-threats
+    repo: threat-modeling-toolkit
+    path: skills/tm-threats
+
+  - name: tm-drift
+    repo: threat-modeling-toolkit
+    path: skills/tm-drift
+
+  - name: tm-full
+    repo: threat-modeling-toolkit
+    path: skills/tm-full
+
+  - name: tm-report
+    repo: threat-modeling-toolkit
+    path: skills/tm-report
+
+  - name: tm-verify
+    repo: threat-modeling-toolkit
+    path: skills/tm-verify
+
+  - name: tm-compliance
+    repo: threat-modeling-toolkit
+    path: skills/tm-compliance
+
+  - name: tm-status
+    repo: threat-modeling-toolkit
+    path: skills/tm-status
+
+  - name: tm-tests
+    repo: threat-modeling-toolkit
+    path: skills/tm-tests

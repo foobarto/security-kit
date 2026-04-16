@@ -1,0 +1,29 @@
+version: 1
+description: >
+  Opt-in hook whitelist for /sec-kit install-hooks.
+  Only hooks listed here can be installed by the command. Anything else is refused.
+
+hooks:
+  - name: gh-cli
+    repo: trailofbits-skills
+    path: plugins/gh-cli/hooks/hooks.json
+    description: >
+      SessionStart prepends a PATH shim. PreToolUse on WebFetch/Bash redirects
+      github.com URLs to the `gh` CLI. Benign convenience feature.
+    risk: low
+    reversible: true
+
+  - name: modern-python
+    repo: trailofbits-skills
+    path: plugins/modern-python/hooks/hooks.json
+    description: >
+      SessionStart prepends a PATH shim that suggests `uv` when `pip` is invoked.
+      Advisory output only — does not replace pip or block invocations.
+    risk: low
+    reversible: true
+
+# Not installable via install-hooks (intentional):
+#   - skill-improver: aggressive self-continuing Stop-hook loop, high token burn
+#   - firebase-apk-scanner: active internet scanner
+#   - second-opinion: auto-launches third-party MCP (codex)
+# Users who want these can install them manually from the Trail of Bits repo.

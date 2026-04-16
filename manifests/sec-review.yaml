@@ -1,0 +1,61 @@
+version: 1
+name: sec-review
+description: >
+  Standard security review bundle. Adds differential-review (PR/diff triage), the static-
+  analysis trio (codeql, semgrep, sarif-parsing), crypto-specific skills, and OWASP web
+  security lens to the minimal set.
+
+skills:
+  # From minimal
+  - name: audit-context-building
+    repo: trailofbits-skills
+    path: plugins/audit-context-building/skills/audit-context-building
+
+  - name: variant-analysis
+    repo: trailofbits-skills
+    path: plugins/variant-analysis/skills/variant-analysis
+
+  - name: supply-chain-risk-auditor
+    repo: trailofbits-skills
+    path: plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor
+
+  - name: insecure-defaults
+    repo: trailofbits-skills
+    path: plugins/insecure-defaults/skills/insecure-defaults
+
+  - name: fp-check
+    repo: trailofbits-skills
+    path: plugins/fp-check/skills/fp-check
+
+  # Sec-review additions
+  - name: differential-review
+    repo: trailofbits-skills
+    path: plugins/differential-review/skills/differential-review
+
+  - name: semgrep-rule-creator
+    repo: trailofbits-skills
+    path: plugins/semgrep-rule-creator/skills/semgrep-rule-creator
+
+  - name: constant-time-analysis
+    repo: trailofbits-skills
+    path: plugins/constant-time-analysis/skills/constant-time-analysis
+
+  - name: zeroize-audit
+    repo: trailofbits-skills
+    path: plugins/zeroize-audit/skills/zeroize-audit
+
+  - name: codeql
+    repo: trailofbits-skills
+    path: plugins/static-analysis/skills/codeql
+
+  - name: semgrep
+    repo: trailofbits-skills
+    path: plugins/static-analysis/skills/semgrep
+
+  - name: sarif-parsing
+    repo: trailofbits-skills
+    path: plugins/static-analysis/skills/sarif-parsing
+
+  - name: owasp-security
+    repo: claude-code-owasp
+    path: .claude/skills/owasp-security

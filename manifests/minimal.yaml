@@ -1,0 +1,27 @@
+version: 1
+name: minimal
+description: >
+  The T6 multi-skill chain — minimum set that caught every non-F4 ground-truth finding
+  in the comparative audit. Best starting point for any project you don't want to spend
+  a lot of tokens on.
+
+skills:
+  - name: audit-context-building
+    repo: trailofbits-skills
+    path: plugins/audit-context-building/skills/audit-context-building
+
+  - name: variant-analysis
+    repo: trailofbits-skills
+    path: plugins/variant-analysis/skills/variant-analysis
+
+  - name: supply-chain-risk-auditor
+    repo: trailofbits-skills
+    path: plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor
+
+  - name: insecure-defaults
+    repo: trailofbits-skills
+    path: plugins/insecure-defaults/skills/insecure-defaults
+
+  - name: fp-check
+    repo: trailofbits-skills
+    path: plugins/fp-check/skills/fp-check

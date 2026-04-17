@@ -34,6 +34,120 @@ Every skill the kit can install, with a short description and primary use case.
 | `tm-status` | Show current state of the threat model in this project. |
 | `tm-tests` | Generate test cases from threat model. |
 
+## Cybersecurity skills (Anthropic-Cybersecurity-Skills)
+
+53 curated skills from 754 total, spanning 15 security domains. All skills follow the agentskills.io standard with MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND, and NIST AI RMF mappings.
+
+### Cloud Security
+| Skill | Purpose |
+|---|---|
+| `auditing-aws-s3-bucket-permissions` | Audit S3 bucket ACLs, policies, encryption, public access |
+| `auditing-azure-active-directory-configuration` | Azure AD identity and access configuration review |
+| `auditing-gcp-iam-permissions` | GCP IAM role and permission audit |
+| `detecting-aws-cloudtrail-anomalies` | AWS audit log anomaly detection |
+| `detecting-azure-lateral-movement` | Azure-specific lateral movement detection |
+| `performing-cloud-penetration-testing-with-pacu` | AWS pentesting with Pacu framework |
+| `implementing-cloud-security-posture-management` | CSPM implementation and monitoring |
+| `implementing-zero-trust-in-cloud` | Cloud zero-trust architecture |
+
+### Threat Hunting
+| Skill | Purpose |
+|---|---|
+| `hunting-advanced-persistent-threats` | APT detection methodology |
+| `hunting-for-cobalt-strike-beacons` | C2 beacon detection via TLS/JA3/HTTP patterns |
+| `hunting-for-lateral-movement-via-wmi` | WMI-based lateral movement hunting |
+| `hunting-for-persistence-mechanisms-in-windows` | Windows persistence detection |
+| `hunting-for-webshell-activity` | Web shell detection |
+| `building-threat-hunt-hypothesis-framework` | Structured threat hunting methodology |
+| `detecting-living-off-the-land-attacks` | LOTL/BYOB technique detection |
+
+### Malware Analysis
+| Skill | Purpose |
+|---|---|
+| `reverse-engineering-malware-with-ghidra` | Static/dynamic RE with Ghidra |
+| `analyzing-malware-behavior-with-cuckoo-sandbox` | Automated dynamic analysis pipeline |
+| `extracting-iocs-from-malware-samples` | IOC extraction workflow |
+| `analyzing-cobalt-strike-beacon-configuration` | C2 config extraction and analysis |
+| `performing-malware-triage-with-yara` | Yara-based malware triage |
+| `deobfuscating-powershell-obfuscated-malware` | PowerShell deobfuscation techniques |
+
+### Incident Response
+| Skill | Purpose |
+|---|---|
+| `conducting-cloud-incident-response` | Cloud-specific IR procedures |
+| `conducting-malware-incident-response` | Malware incident containment and analysis |
+| `conducting-phishing-incident-response` | Phishing IR playbook |
+| `building-incident-response-playbook` | IR playbook creation |
+| `building-incident-timeline-with-timesketch` | Timeline reconstruction |
+| `collecting-volatile-evidence-from-compromised-host` | Live evidence collection |
+
+### Penetration Testing / Red Teaming
+| Skill | Purpose |
+|---|---|
+| `conducting-full-scope-red-team-engagement` | End-to-end red team operations |
+| `conducting-internal-network-penetration-test` | Internal network pentest |
+| `conducting-network-penetration-test` | External network pentest |
+| `exploiting-active-directory-with-bloodhound` | AD attack path mapping |
+| `performing-active-directory-penetration-test` | AD-specific pentest |
+| `performing-web-application-penetration-test` | Web app pentest |
+| `executing-red-team-engagement-planning` | Red team scoping and planning |
+
+### Web Application Security
+| Skill | Purpose |
+|---|---|
+| `conducting-api-security-testing` | API security assessment |
+| `exploiting-sql-injection-vulnerabilities` | SQLi exploitation and remediation |
+| `testing-for-broken-access-control` | OWASP access control testing |
+| `performing-web-application-firewall-bypass` | WAF evasion testing |
+
+### Network Security
+| Skill | Purpose |
+|---|---|
+| `analyzing-network-traffic-with-wireshark` | Packet analysis and protocol inspection |
+| `configuring-suricata-for-network-monitoring` | NIDS deployment and rule management |
+| `scanning-network-with-nmap-advanced` | Advanced network reconnaissance |
+
+### Digital Forensics
+| Skill | Purpose |
+|---|---|
+| `analyzing-memory-dumps-with-volatility` | Memory forensics with Volatility |
+| `performing-disk-forensics-investigation` | Disk forensic investigation |
+| `acquiring-disk-image-with-dd-and-dcfldd` | Forensic disk imaging |
+
+### SOC Operations
+| Skill | Purpose |
+|---|---|
+| `analyzing-security-logs-with-splunk` | SIEM log analysis and correlation |
+| `building-detection-rules-with-sigma` | Sigma rule creation |
+| `triaging-security-incident` | SOC triage workflow |
+
+### Identity & Access Management
+| Skill | Purpose |
+|---|---|
+| `analyzing-active-directory-acl-abuse` | AD ACL attack detection and remediation |
+
+### Container Security
+| Skill | Purpose |
+|---|---|
+| `hardening-docker-containers-for-production` | Container hardening |
+| `performing-container-security-scanning-with-trivy` | Image vulnerability scanning |
+
+### DevSecOps
+| Skill | Purpose |
+|---|---|
+| `implementing-secret-scanning-with-gitleaks` | Secret detection in code repos |
+
+### Vulnerability Management
+| Skill | Purpose |
+|---|---|
+| `performing-vulnerability-scanning-with-nessus` | Vulnerability scanning and reporting |
+
+### Phishing Defense
+| Skill | Purpose |
+|---|---|
+| `analyzing-email-headers-for-phishing-investigation` | Email header forensics |
+| `implementing-dmarc-dkim-spf-email-security` | Email authentication protocols |
+
 ## Opt-in hooks (via `install-hooks`)
 
 | Hook | Purpose | Risk |

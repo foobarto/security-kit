@@ -60,9 +60,10 @@ On first run in a new environment, `install` creates the directory and clones th
 
 | Repo | Sources dir |
 |---|---|
-| trailofbits/skills | `<SOURCES>/trailofbits-skills/` |
-| agamm/claude-code-owasp | `<SOURCES>/claude-code-owasp/` |
-| josemlopez/threat-modeling-toolkit | `<SOURCES>/threat-modeling-toolkit/` |
+| trailofbits-skills | `<SOURCES>/trailofbits-skills/` |
+| claude-code-owasp | `<SOURCES>/claude-code-owasp/` |
+| threat-modeling-toolkit | `<SOURCES>/threat-modeling-toolkit/` |
+| anthropic-cybersecurity-skills | `<SOURCES>/anthropic-cybersecurity-skills/` (cybersecurity variant) |
 | gadievron/raptor | `<SOURCES>/raptor/` (only on `install-raptor`) |
 
 ## Project-local footprint

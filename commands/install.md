@@ -4,7 +4,7 @@ Install a skill bundle into `.claude/skills/` of the current project. No hooks i
 
 ## Arguments
 
-- `variant` — one of `minimal`, `sec-review`, `threat-modeling`, `full`. Default: `full`.
+- `variant` — one of `minimal`, `sec-review`, `threat-modeling`, `cybersecurity`, `full`. Default: `full`.
 
 ## What to do
 
@@ -26,6 +26,7 @@ For every repo the chosen variant needs, check that its directory exists under `
 - `trailofbits-skills` — from `https://github.com/trailofbits/skills.git`
 - `claude-code-owasp` — from `https://github.com/agamm/claude-code-owasp.git`
 - `threat-modeling-toolkit` — from `https://github.com/josemlopez/threat-modeling-toolkit.git`
+- `anthropic-cybersecurity-skills` — from `https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git`
 
 If any are missing:
 
@@ -35,6 +36,7 @@ cd "$SOURCES"
 git clone --depth 1 https://github.com/trailofbits/skills.git trailofbits-skills
 git clone --depth 1 https://github.com/agamm/claude-code-owasp.git
 git clone --depth 1 https://github.com/josemlopez/threat-modeling-toolkit.git
+git clone --depth 1 https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git anthropic-cybersecurity-skills
 ```
 
 Only clone repos actually required by the chosen variant.

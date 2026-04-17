@@ -1,0 +1,243 @@
+version: 1
+name: cybersecurity
+description: >
+  Curated set of 53 high-impact cybersecurity skills from the Anthropic-Cybersecurity-Skills
+  library (754 skills total). Covers cloud security, threat hunting, malware analysis,
+  incident response, penetration testing, web app security, network security, digital
+  forensics, SOC operations, IAM, container security, DevSecOps, vulnerability management,
+  and phishing defense. Each skill is mapped to MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS,
+  D3FEND, and NIST AI RMF frameworks.
+
+  Use when you need AI-guided security operations, threat hunting, incident response,
+  or penetration testing workflows.
+
+skills:
+  # === Cloud Security ===
+  - name: auditing-aws-s3-bucket-permissions
+    repo: anthropic-cybersecurity-skills
+    path: skills/auditing-aws-s3-bucket-permissions
+
+  - name: auditing-azure-active-directory-configuration
+    repo: anthropic-cybersecurity-skills
+    path: skills/auditing-azure-active-directory-configuration
+
+  - name: auditing-gcp-iam-permissions
+    repo: anthropic-cybersecurity-skills
+    path: skills/auditing-gcp-iam-permissions
+
+  - name: detecting-aws-cloudtrail-anomalies
+    repo: anthropic-cybersecurity-skills
+    path: skills/detecting-aws-cloudtrail-anomalies
+
+  - name: detecting-azure-lateral-movement
+    repo: anthropic-cybersecurity-skills
+    path: skills/detecting-azure-lateral-movement
+
+  - name: performing-cloud-penetration-testing-with-pacu
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-cloud-penetration-testing-with-pacu
+
+  - name: implementing-cloud-security-posture-management
+    repo: anthropic-cybersecurity-skills
+    path: skills/implementing-cloud-security-posture-management
+
+  - name: implementing-zero-trust-in-cloud
+    repo: anthropic-cybersecurity-skills
+    path: skills/implementing-zero-trust-in-cloud
+
+  # === Threat Hunting ===
+  - name: hunting-advanced-persistent-threats
+    repo: anthropic-cybersecurity-skills
+    path: skills/hunting-advanced-persistent-threats
+
+  - name: hunting-for-cobalt-strike-beacons
+    repo: anthropic-cybersecurity-skills
+    path: skills/hunting-for-cobalt-strike-beacons
+
+  - name: hunting-for-lateral-movement-via-wmi
+    repo: anthropic-cybersecurity-skills
+    path: skills/hunting-for-lateral-movement-via-wmi
+
+  - name: hunting-for-persistence-mechanisms-in-windows
+    repo: anthropic-cybersecurity-skills
+    path: skills/hunting-for-persistence-mechanisms-in-windows
+
+  - name: hunting-for-webshell-activity
+    repo: anthropic-cybersecurity-skills
+    path: skills/hunting-for-webshell-activity
+
+  - name: building-threat-hunt-hypothesis-framework
+    repo: anthropic-cybersecurity-skills
+    path: skills/building-threat-hunt-hypothesis-framework
+
+  - name: detecting-living-off-the-land-attacks
+    repo: anthropic-cybersecurity-skills
+    path: skills/detecting-living-off-the-land-attacks
+
+  # === Malware Analysis ===
+  - name: reverse-engineering-malware-with-ghidra
+    repo: anthropic-cybersecurity-skills
+    path: skills/reverse-engineering-malware-with-ghidra
+
+  - name: analyzing-malware-behavior-with-cuckoo-sandbox
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-malware-behavior-with-cuckoo-sandbox
+
+  - name: extracting-iocs-from-malware-samples
+    repo: anthropic-cybersecurity-skills
+    path: skills/extracting-iocs-from-malware-samples
+
+  - name: analyzing-cobalt-strike-beacon-configuration
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-cobalt-strike-beacon-configuration
+
+  - name: performing-malware-triage-with-yara
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-malware-triage-with-yara
+
+  - name: deobfuscating-powershell-obfuscated-malware
+    repo: anthropic-cybersecurity-skills
+    path: skills/deobfuscating-powershell-obfuscated-malware
+
+  # === Incident Response ===
+  - name: conducting-cloud-incident-response
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-cloud-incident-response
+
+  - name: conducting-malware-incident-response
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-malware-incident-response
+
+  - name: conducting-phishing-incident-response
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-phishing-incident-response
+
+  - name: building-incident-response-playbook
+    repo: anthropic-cybersecurity-skills
+    path: skills/building-incident-response-playbook
+
+  - name: building-incident-timeline-with-timesketch
+    repo: anthropic-cybersecurity-skills
+    path: skills/building-incident-timeline-with-timesketch
+
+  - name: collecting-volatile-evidence-from-compromised-host
+    repo: anthropic-cybersecurity-skills
+    path: skills/collecting-volatile-evidence-from-compromised-host
+
+  # === Penetration Testing / Red Teaming ===
+  - name: conducting-full-scope-red-team-engagement
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-full-scope-red-team-engagement
+
+  - name: conducting-internal-network-penetration-test
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-internal-network-penetration-test
+
+  - name: conducting-network-penetration-test
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-network-penetration-test
+
+  - name: exploiting-active-directory-with-bloodhound
+    repo: anthropic-cybersecurity-skills
+    path: skills/exploiting-active-directory-with-bloodhound
+
+  - name: performing-active-directory-penetration-test
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-active-directory-penetration-test
+
+  - name: performing-web-application-penetration-test
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-web-application-penetration-test
+
+  - name: executing-red-team-engagement-planning
+    repo: anthropic-cybersecurity-skills
+    path: skills/executing-red-team-engagement-planning
+
+  # === Web Application Security ===
+  - name: conducting-api-security-testing
+    repo: anthropic-cybersecurity-skills
+    path: skills/conducting-api-security-testing
+
+  - name: exploiting-sql-injection-vulnerabilities
+    repo: anthropic-cybersecurity-skills
+    path: skills/exploiting-sql-injection-vulnerabilities
+
+  - name: testing-for-broken-access-control
+    repo: anthropic-cybersecurity-skills
+    path: skills/testing-for-broken-access-control
+
+  - name: performing-web-application-firewall-bypass
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-web-application-firewall-bypass
+
+  # === Network Security ===
+  - name: analyzing-network-traffic-with-wireshark
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-network-traffic-with-wireshark
+
+  - name: configuring-suricata-for-network-monitoring
+    repo: anthropic-cybersecurity-skills
+    path: skills/configuring-suricata-for-network-monitoring
+
+  - name: scanning-network-with-nmap-advanced
+    repo: anthropic-cybersecurity-skills
+    path: skills/scanning-network-with-nmap-advanced
+
+  # === Digital Forensics ===
+  - name: analyzing-memory-dumps-with-volatility
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-memory-dumps-with-volatility
+
+  - name: performing-disk-forensics-investigation
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-disk-forensics-investigation
+
+  - name: acquiring-disk-image-with-dd-and-dcfldd
+    repo: anthropic-cybersecurity-skills
+    path: skills/acquiring-disk-image-with-dd-and-dcfldd
+
+  # === SOC Operations ===
+  - name: analyzing-security-logs-with-splunk
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-security-logs-with-splunk
+
+  - name: building-detection-rules-with-sigma
+    repo: anthropic-cybersecurity-skills
+    path: skills/building-detection-rules-with-sigma
+
+  - name: triaging-security-incident
+    repo: anthropic-cybersecurity-skills
+    path: skills/triaging-security-incident
+
+  # === Identity & Access Management ===
+  - name: analyzing-active-directory-acl-abuse
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-active-directory-acl-abuse
+
+  # === Container Security ===
+  - name: hardening-docker-containers-for-production
+    repo: anthropic-cybersecurity-skills
+    path: skills/hardening-docker-containers-for-production
+
+  - name: performing-container-security-scanning-with-trivy
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-container-security-scanning-with-trivy
+
+  # === DevSecOps ===
+  - name: implementing-secret-scanning-with-gitleaks
+    repo: anthropic-cybersecurity-skills
+    path: skills/implementing-secret-scanning-with-gitleaks
+
+  # === Vulnerability Management ===
+  - name: performing-vulnerability-scanning-with-nessus
+    repo: anthropic-cybersecurity-skills
+    path: skills/performing-vulnerability-scanning-with-nessus
+
+  # === Phishing Defense ===
+  - name: analyzing-email-headers-for-phishing-investigation
+    repo: anthropic-cybersecurity-skills
+    path: skills/analyzing-email-headers-for-phishing-investigation
+
+  - name: implementing-dmarc-dkim-spf-email-security
+    repo: anthropic-cybersecurity-skills
+    path: skills/implementing-dmarc-dkim-spf-email-security

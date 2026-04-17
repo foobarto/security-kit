@@ -23,6 +23,7 @@ orchestrates their execution.
 - "run a security scan" / "audit this codebase" → `/sec-kit scan` (if installed) or `/sec-kit smart-scan`
 - "what security skills are installed" → `/sec-kit list`
 - "install raptor" / "install offensive security framework" → `/sec-kit install-raptor`
+- "install pentagi" / "install pentesting platform" → `/sec-kit install-pentagi`
 - "remove the security skills" / "clean up" → `/sec-kit uninstall`
 
 ## Command reference
@@ -38,6 +39,8 @@ Every subcommand is documented in a dedicated file under `commands/`:
 | `uninstall` | `commands/uninstall.md` | Remove installed skills |
 | `uninstall-hooks` | `commands/uninstall-hooks.md` | Remove installed hooks |
 | `uninstall-raptor` | `commands/uninstall-raptor.md` | Remove raptor framework |
+| `install-pentagi` | `commands/install-pentagi.md` | Opt-in PentAGI pentesting platform install |
+| `uninstall-pentagi` | `commands/uninstall-pentagi.md` | Remove PentAGI wrapper and deployment files |
 | `scan` | `commands/scan.md` | Run installed skills in the correct order against the project |
 | `smart-scan` | `commands/smart-scan.md` | Fingerprint the project, then curate a tailored scan prompt |
 
@@ -64,6 +67,7 @@ On first run in a new environment, `install` creates the directory and clones th
 | claude-code-owasp | `<SOURCES>/claude-code-owasp/` |
 | threat-modeling-toolkit | `<SOURCES>/threat-modeling-toolkit/` |
 | anthropic-cybersecurity-skills | `<SOURCES>/anthropic-cybersecurity-skills/` (cybersecurity variant) |
+| vxcontrol/pentagi | `<SOURCES>/pentagi/` (only on `install-pentagi`) |
 | gadievron/raptor | `<SOURCES>/raptor/` (only on `install-raptor`) |
 
 ## Project-local footprint

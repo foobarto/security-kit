@@ -148,6 +148,26 @@ Every skill the kit can install, with a short description and primary use case.
 | `analyzing-email-headers-for-phishing-investigation` | Email header forensics |
 | `implementing-dmarc-dkim-spf-email-security` | Email authentication protocols |
 
+## Opt-in frameworks
+
+### PentAGI (via `install-pentagi`)
+
+PentAGI is not a skill but a full autonomous penetration testing platform. Installing it adds:
+
+- A wrapper skill in `.claude/skills/pentagi/` with API interaction instructions
+- `.pentagi/` directory with docker-compose.yml, .env.example, and management scripts
+- Three helper scripts: `pentagi-start.sh`, `pentagi-stop.sh`, `pentagi-status.sh`
+
+PentAGI provides:
+- AI-powered multi-agent penetration testing (Researcher, Developer, Executor)
+- 20+ built-in security tools (nmap, metasploit, sqlmap, etc.)
+- Web UI at https://localhost:8443
+- REST + GraphQL API for automation
+- Long-term memory and knowledge graph (Neo4j/Graphiti)
+- Support for 10+ LLM providers (OpenAI, Anthropic, Gemini, Ollama, etc.)
+
+Use when you want fully autonomous pentesting with AI agents, not just skill-guided manual analysis.
+
 ## Opt-in hooks (via `install-hooks`)
 
 | Hook | Purpose | Risk |

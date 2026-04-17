@@ -37,6 +37,7 @@ This lets users migrate without losing their existing clones.
 | `claude-code-owasp` | https://github.com/agamm/claude-code-owasp.git | sec-review variant |
 | `threat-modeling-toolkit` | https://github.com/josemlopez/threat-modeling-toolkit.git | threat-modeling variant |
 | `anthropic-cybersecurity-skills` | https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git | cybersecurity variant (53 curated skills from 754 total) |
+| `pentagi` | https://github.com/vxcontrol/pentagi.git | install-pentagi only (opt-in pentesting platform) |
 | `raptor` | https://github.com/gadievron/raptor.git | install-raptor only (opt-in) |
 
 Clones are always `--depth 1`. Update via:

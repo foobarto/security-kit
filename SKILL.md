@@ -24,6 +24,7 @@ orchestrates their execution.
 - "what security skills are installed" → `/sec-kit list`
 - "install raptor" / "install offensive security framework" → `/sec-kit install-raptor`
 - "install pentagi" / "install pentesting platform" → `/sec-kit install-pentagi`
+- "install hexstrike" / "install mcp security tools" → `/sec-kit install-hexstrike`
 - "remove the security skills" / "clean up" → `/sec-kit uninstall`
 
 ## Command reference
@@ -41,6 +42,8 @@ Every subcommand is documented in a dedicated file under `commands/`:
 | `uninstall-raptor` | `commands/uninstall-raptor.md` | Remove raptor framework |
 | `install-pentagi` | `commands/install-pentagi.md` | Opt-in PentAGI pentesting platform install |
 | `uninstall-pentagi` | `commands/uninstall-pentagi.md` | Remove PentAGI wrapper and deployment files |
+| `install-hexstrike` | `commands/install-hexstrike.md` | Opt-in HexStrike AI MCP server install |
+| `uninstall-hexstrike` | `commands/uninstall-hexstrike.md` | Remove HexStrike wrapper and venv |
 | `scan` | `commands/scan.md` | Run installed skills in the correct order against the project |
 | `smart-scan` | `commands/smart-scan.md` | Fingerprint the project, then curate a tailored scan prompt |
 
@@ -68,6 +71,7 @@ On first run in a new environment, `install` creates the directory and clones th
 | threat-modeling-toolkit | `<SOURCES>/threat-modeling-toolkit/` |
 | anthropic-cybersecurity-skills | `<SOURCES>/anthropic-cybersecurity-skills/` (cybersecurity variant) |
 | vxcontrol/pentagi | `<SOURCES>/pentagi/` (only on `install-pentagi`) |
+| 0x4m4/hexstrike-ai | `<SOURCES>/hexstrike-ai/` (only on `install-hexstrike`) |
 | gadievron/raptor | `<SOURCES>/raptor/` (only on `install-raptor`) |
 
 ## Project-local footprint

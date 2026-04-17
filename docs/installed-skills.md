@@ -168,6 +168,25 @@ PentAGI provides:
 
 Use when you want fully autonomous pentesting with AI agents, not just skill-guided manual analysis.
 
+### HexStrike AI (via `install-hexstrike`)
+
+HexStrike AI is an MCP server, not a skill. Installing it adds:
+
+- A wrapper skill in `.claude/skills/hexstrike/` with API and tool usage instructions
+- `.hexstrike/` directory with:
+  - Python virtual environment (`venv/`)
+  - Symlink to source repo (`source/` → `$SOURCES/hexstrike-ai`)
+  - Management scripts (`hexstrike-start.sh`, `hexstrike-stop.sh`, `hexstrike-setup.sh`)
+
+HexStrike provides:
+- 150+ security tools accessible via MCP protocol (nmap, nuclei, sqlmap, gobuster, hashcat, etc.)
+- 12+ autonomous AI agents (BugBounty, CTF Solver, CVE Intelligence, Exploit Generator)
+- REST API with intelligent decision engine and tool selection
+- Smart caching, process management, and vulnerability intelligence
+- Support for Claude Desktop, VS Code Copilot, Cursor, Roo Code, and any MCP-compatible agent
+
+Use when you want AI agents to directly execute real security tools against authorized targets.
+
 ## Opt-in hooks (via `install-hooks`)
 
 | Hook | Purpose | Risk |

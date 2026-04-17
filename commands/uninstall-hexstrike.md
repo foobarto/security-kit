@@ -1,4 +1,4 @@
-# /sec-kit uninstall-hexstrike
+# /security-kit uninstall-hexstrike
 
 Remove the HexStrike AI wrapper skill and deployment files from the current project.
 

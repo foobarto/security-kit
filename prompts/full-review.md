@@ -81,7 +81,7 @@ The order is deliberate:
 
 **Minimal bundle installed:** skip step 6's static-analysis tools (semgrep/codeql); keep the subprocess hygiene pass.
 
-**Threat-modeling bundle installed:** run this prompt first, then `/sec-kit scan` again with `threat-model.md`.
+**Threat-modeling bundle installed:** run this prompt first, then `/security-kit scan` again with `threat-model.md`.
 
 **Raptor installed and you want PoCs:** append:
 

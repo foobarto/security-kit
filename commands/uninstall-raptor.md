@@ -1,6 +1,6 @@
-# /sec-kit uninstall-raptor
+# /security-kit uninstall-raptor
 
-Remove the raptor framework installed by `/sec-kit install-raptor`.
+Remove the raptor framework installed by `/security-kit install-raptor`.
 
 ## What to do
 

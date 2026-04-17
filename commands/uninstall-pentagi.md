@@ -1,4 +1,4 @@
-# /sec-kit uninstall-pentagi
+# /security-kit uninstall-pentagi
 
 Remove the PentAGI wrapper skill and deployment files from the current project.
 

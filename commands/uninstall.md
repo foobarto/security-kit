@@ -1,4 +1,4 @@
-# /sec-kit uninstall [variant]
+# /security-kit uninstall [variant]
 
 Remove kit-installed skills from the current project.
 
@@ -14,7 +14,7 @@ Remove kit-installed skills from the current project.
 Read `.security-kit/installed.yaml`. If it doesn't exist, print:
 
 ```
-No sec-kit installation found in this project.
+No security-kit installation found in this project.
 ```
 
 and stop.
@@ -55,7 +55,7 @@ Kept intact:
   - raptor (use uninstall-raptor separately)
   - user-owned .claude/skills/* (non-symlink)
 
-Sources at ~/.local/share/security-kit/sources remain. Use `/sec-kit purge` to remove those too.
+Sources at ~/.local/share/security-kit/sources remain. Use `/security-kit purge` to remove those too.
 ```
 
 ## Safety

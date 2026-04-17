@@ -2,7 +2,7 @@
 
 Chains `differential-review` (what changed) with `tm-drift` (does the TM still hold). This is the closest thing to a "benign vs significant" PR triage tool today.
 
-Prerequisite: the project has an existing threat model in `.threatmodel/` (created via `/sec-kit scan` with the threat-modeling variant, or `tm-full` directly). If not, this prompt falls back to differential-review alone.
+Prerequisite: the project has an existing threat model in `.threatmodel/` (created via `/security-kit scan` with the threat-modeling variant, or `tm-full` directly). If not, this prompt falls back to differential-review alone.
 
 ---
 

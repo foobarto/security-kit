@@ -1,4 +1,4 @@
-# /sec-kit list
+# /security-kit list
 
 Show every skill the kit offers plus what is currently installed in this project.
 

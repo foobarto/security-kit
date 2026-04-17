@@ -1,6 +1,6 @@
-# /sec-kit uninstall-hooks <name...>
+# /security-kit uninstall-hooks <name...>
 
-Remove opt-in hooks installed by `/sec-kit install-hooks`.
+Remove opt-in hooks installed by `/security-kit install-hooks`.
 
 ## What to do
 

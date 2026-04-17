@@ -1,4 +1,4 @@
-# /sec-kit install-hooks <name...>
+# /security-kit install-hooks <name...>
 
 Opt-in installation of Trail of Bits skills that ship with hooks. Whitelist-only.
 
@@ -39,7 +39,7 @@ Installing hook: gh-cli
     - SessionStart → prepends trailofbits-skills/plugins/gh-cli/hooks/shims to PATH
     - PreToolUse (WebFetch, Bash) → redirects github.com URLs to gh CLI
   Modifies: PATH for Claude's shell tool calls in this project
-  Reversible: yes, via /sec-kit uninstall-hooks gh-cli
+  Reversible: yes, via /security-kit uninstall-hooks gh-cli
 ```
 
 Wait for explicit "yes" from the user before proceeding (Claude should ask).
@@ -68,5 +68,5 @@ hooks:
 ```
 Installed hooks: gh-cli
 Claude Code will pick up the new hook configuration on next session start in this directory.
-To remove: /sec-kit uninstall-hooks gh-cli
+To remove: /security-kit uninstall-hooks gh-cli
 ```

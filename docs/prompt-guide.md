@@ -62,6 +62,6 @@ All prompts use `{{VARIABLE}}` placeholders. `smart-scan` fills these automatica
 
 ## Customization
 
-Project-local prompts at `.security-kit/prompts/` can be edited freely — they're your copy. To reset to upstream defaults, run `/sec-kit install` again (overwrites local copies).
+Project-local prompts at `.security-kit/prompts/` can be edited freely — they're your copy. To reset to upstream defaults, run `/security-kit install` again (overwrites local copies).
 
 To share custom prompts across projects, edit the originals in `~/Dokumenty/security-kit/prompts/` (or wherever the kit is checked out) and re-run `install` in each project.

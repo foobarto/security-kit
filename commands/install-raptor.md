@@ -1,4 +1,4 @@
-# /sec-kit install-raptor
+# /security-kit install-raptor
 
 Opt-in installation of the raptor offensive/defensive security framework (by Gadi Evron et al).
 
@@ -51,7 +51,7 @@ Installing raptor will:
   3. Install a .raptor/ directory in this project for raptor's own state (session dirs,
      scan output, etc.)
 
-Fully reversible via /sec-kit uninstall-raptor.
+Fully reversible via /security-kit uninstall-raptor.
 
 Continue? (yes/no)
 ```
@@ -117,7 +117,7 @@ Quick commands (try now or after restarting Claude Code in this directory):
 
 Raptor's SessionStart hook will print a banner on your next session start in this directory.
 
-To remove everything: /sec-kit uninstall-raptor
+To remove everything: /security-kit uninstall-raptor
 ```
 
 ### Step 6 — Alert on missing dependencies

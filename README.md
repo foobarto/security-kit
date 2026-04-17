@@ -8,46 +8,46 @@ Security review with Claude Code works best when the model has the right skills 
 
 1. **Installs curated skill bundles** into `.claude/skills/` of the current project, with variants for different needs (minimal, sec-review, threat-modeling, cybersecurity, full).
 2. **Ships battle-tested prompts** for the common workflows (broad review, PR-diff triage, threat modeling, shell-string audit).
-3. **Orchestrates runs.** `/sec-kit scan` runs the installed skills in the correct sequence. `/sec-kit smart-scan` fingerprints the project first and curates a prompt tailored to its shape.
+3. **Orchestrates runs.** `/security-kit scan` runs the installed skills in the correct sequence. `/security-kit smart-scan` fingerprints the project first and curates a prompt tailored to its shape.
 
 Opt-in frameworks and platforms are kept separate from the default flow:
-- **Raptor** (`/sec-kit install-raptor`) — offensive-security harness with SessionStart hook and `/raptor-*` commands
-- **PentAGI** (`/sec-kit install-pentagi`) — autonomous pentesting platform (Go + React + Docker, 20+ built-in tools)
-- **HexStrike AI** (`/sec-kit install-hexstrike`) — MCP server exposing 150+ security tools to AI agents
+- **Raptor** (`/security-kit install-raptor`) — offensive-security harness with SessionStart hook and `/raptor-*` commands
+- **PentAGI** (`/security-kit install-pentagi`) — autonomous pentesting platform (Go + React + Docker, 20+ built-in tools)
+- **HexStrike AI** (`/security-kit install-hexstrike`) — MCP server exposing 150+ security tools to AI agents
 
 ## Quick start
 
 In any project directory:
 
 ```
-/sec-kit install            # install the full variant (no hooks)
-/sec-kit scan               # run the installed skills against this project
-/sec-kit uninstall          # clean up when done
+/security-kit install            # install the full variant (no hooks)
+/security-kit scan               # run the installed skills against this project
+/security-kit uninstall          # clean up when done
 ```
 
 For a project where you want Claude to pick the right skills itself:
 
 ```
-/sec-kit smart-scan         # analyzes project shape, writes a tailored scan prompt
+/security-kit smart-scan         # analyzes project shape, writes a tailored scan prompt
 ```
 
 ## Commands
 
 | Command | Purpose |
 |---|---|
-| `/sec-kit list` | List every skill the kit offers + what's currently installed in this project |
-| `/sec-kit install [variant]` | Install skills. Variants: `minimal`, `sec-review`, `threat-modeling`, `cybersecurity`, `full` (default). No hooks. |
-| `/sec-kit install-hooks <name...>` | Opt-in hook installer from a whitelist: `gh-cli`, `modern-python` |
-| `/sec-kit install-raptor` | Opt-in raptor framework. Installs SessionStart hook, `/raptor-*` commands, CLAUDE.md override. |
-| `/sec-kit install-pentagi` | Opt-in PentAGI autonomous pentesting platform. Docker Compose deploy + wrapper skill. |
-| `/sec-kit install-hexstrike` | Opt-in HexStrike AI MCP server. 150+ security tools via MCP protocol. |
-| `/sec-kit uninstall [variant]` | Remove installed skills. Default removes all sec-kit-managed skills. |
-| `/sec-kit uninstall-hooks <name...>` | Remove specified hooks |
-| `/sec-kit uninstall-raptor` | Remove raptor framework from the project |
-| `/sec-kit uninstall-pentagi` | Remove PentAGI wrapper and deployment files |
-| `/sec-kit uninstall-hexstrike` | Remove HexStrike wrapper and venv |
-| `/sec-kit scan` | Run all installed skills in the correct sequence against this project |
-| `/sec-kit smart-scan` | Fingerprint the project, then curate a scan prompt tailored to the project's shape |
+| `/security-kit list` | List every skill the kit offers + what's currently installed in this project |
+| `/security-kit install [variant]` | Install skills. Variants: `minimal`, `sec-review`, `threat-modeling`, `cybersecurity`, `full` (default). No hooks. |
+| `/security-kit install-hooks <name...>` | Opt-in hook installer from a whitelist: `gh-cli`, `modern-python` |
+| `/security-kit install-raptor` | Opt-in raptor framework. Installs SessionStart hook, `/raptor-*` commands, CLAUDE.md override. |
+| `/security-kit install-pentagi` | Opt-in PentAGI autonomous pentesting platform. Docker Compose deploy + wrapper skill. |
+| `/security-kit install-hexstrike` | Opt-in HexStrike AI MCP server. 150+ security tools via MCP protocol. |
+| `/security-kit uninstall [variant]` | Remove installed skills. Default removes all sec-kit-managed skills. |
+| `/security-kit uninstall-hooks <name...>` | Remove specified hooks |
+| `/security-kit uninstall-raptor` | Remove raptor framework from the project |
+| `/security-kit uninstall-pentagi` | Remove PentAGI wrapper and deployment files |
+| `/security-kit uninstall-hexstrike` | Remove HexStrike wrapper and venv |
+| `/security-kit scan` | Run all installed skills in the correct sequence against this project |
+| `/security-kit smart-scan` | Fingerprint the project, then curate a scan prompt tailored to the project's shape |
 
 ## Install variants
 
@@ -69,9 +69,9 @@ Deliberately excluded from all variants:
 
 | Framework | What it is | Install command |
 |---|---|---|
-| Raptor | Offensive-security harness with SessionStart hook, `/raptor-*` commands, CLAUDE.md override | `/sec-kit install-raptor` |
-| PentAGI | Autonomous pentesting platform (Go backend + React UI + Docker, 20+ built-in tools, multi-agent AI) | `/sec-kit install-pentagi` |
-| HexStrike AI | MCP server exposing 150+ security tools (nmap, nuclei, sqlmap, etc.) to AI agents via FastMCP | `/sec-kit install-hexstrike` |
+| Raptor | Offensive-security harness with SessionStart hook, `/raptor-*` commands, CLAUDE.md override | `/security-kit install-raptor` |
+| PentAGI | Autonomous pentesting platform (Go backend + React UI + Docker, 20+ built-in tools, multi-agent AI) | `/security-kit install-pentagi` |
+| HexStrike AI | MCP server exposing 150+ security tools (nmap, nuclei, sqlmap, etc.) to AI agents via FastMCP | `/security-kit install-hexstrike` |
 
 ## Where things live (XDG-compliant)
 
@@ -103,7 +103,7 @@ Prewritten, battle-tested prompts live in `prompts/` of this repo and are instal
 
 ## Uninstall is complete
 
-`/sec-kit uninstall` removes every symlink the kit created. `uninstall-hooks` and `uninstall-raptor` each clean their own additions. The project-local `.security-kit/` directory is removed. Skill sources in `~/.local/share/security-kit/` stay put (they're shared across projects); `/sec-kit purge` removes those too if you want a full wipe.
+`/security-kit uninstall` removes every symlink the kit created. `uninstall-hooks` and `uninstall-raptor` each clean their own additions. The project-local `.security-kit/` directory is removed. Skill sources in `~/.local/share/security-kit/` stay put (they're shared across projects); `/security-kit purge` removes those too if you want a full wipe.
 
 ## License
 

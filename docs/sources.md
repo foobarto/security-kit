@@ -70,4 +70,4 @@ Clone the source repos by hand on a connected machine, rsync them to the air-gap
 
 ## Purge
 
-`/sec-kit purge` removes the sources directory. Warning: affects every project that has sec-kit skills installed, since their symlinks will break. Re-run `install` in each project after a purge to restore.
+`/security-kit purge` removes the sources directory. Warning: affects every project that has security-kit skills installed, since their symlinks will break. Re-run `install` in each project after a purge to restore.

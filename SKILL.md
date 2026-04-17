@@ -4,7 +4,7 @@ description: |
   Install, manage, and orchestrate a curated bundle of third-party Claude Code security review
   and threat-modeling skills in a project. Use this skill when the user says any of: "set up
   security tools", "install security skills", "audit this project", "run security scan",
-  "threat model this project", "/sec-kit", "sec-kit install", "sec-kit scan", "sec-kit smart-scan".
+  "threat model this project", "/security-kit", "security-kit install", "security-kit scan", "security-kit smart-scan".
   Provides install/uninstall of skill bundles (minimal, sec-review, threat-modeling, full),
   opt-in hook management, opt-in raptor framework integration, and two scan orchestrators:
   a standard scan that runs installed skills in sequence, and a smart-scan that fingerprints
@@ -19,13 +19,13 @@ orchestrates their execution.
 
 ## When to use
 
-- "install security tools in this project" → `/sec-kit install`
-- "run a security scan" / "audit this codebase" → `/sec-kit scan` (if installed) or `/sec-kit smart-scan`
-- "what security skills are installed" → `/sec-kit list`
-- "install raptor" / "install offensive security framework" → `/sec-kit install-raptor`
-- "install pentagi" / "install pentesting platform" → `/sec-kit install-pentagi`
-- "install hexstrike" / "install mcp security tools" → `/sec-kit install-hexstrike`
-- "remove the security skills" / "clean up" → `/sec-kit uninstall`
+- "install security tools in this project" → `/security-kit install`
+- "run a security scan" / "audit this codebase" → `/security-kit scan` (if installed) or `/security-kit smart-scan`
+- "what security skills are installed" → `/security-kit list`
+- "install raptor" / "install offensive security framework" → `/security-kit install-raptor`
+- "install pentagi" / "install pentesting platform" → `/security-kit install-pentagi`
+- "install hexstrike" / "install mcp security tools" → `/security-kit install-hexstrike`
+- "remove the security skills" / "clean up" → `/security-kit uninstall`
 
 ## Command reference
 

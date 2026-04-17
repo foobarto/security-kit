@@ -1,4 +1,4 @@
-# /sec-kit scan
+# /security-kit scan
 
 Run the installed security skills against the current project, in the correct sequence.
 
@@ -6,7 +6,7 @@ Run the installed security skills against the current project, in the correct se
 
 ### Step 1 — Check what is installed
 
-Read `.security-kit/installed.yaml`. If absent or empty, tell the user to run `/sec-kit install` or `/sec-kit smart-scan` first and stop.
+Read `.security-kit/installed.yaml`. If absent or empty, tell the user to run `/security-kit install` or `/security-kit smart-scan` first and stop.
 
 ### Step 2 — Pick the right prompt
 
@@ -46,7 +46,7 @@ If the user passes `--with-raptor` and raptor is installed in this project:
 2. Raptor's pipeline will produce `out/scan_<timestamp>/` with SARIF findings, attack traces, PoCs, and unified-diff patches.
 3. Follow up with the T6 chain against raptor's SARIF to cross-check.
 
-If `--with-raptor` is set but raptor is not installed, tell the user to run `/sec-kit install-raptor` first.
+If `--with-raptor` is set but raptor is not installed, tell the user to run `/security-kit install-raptor` first.
 
 ## Notes
 

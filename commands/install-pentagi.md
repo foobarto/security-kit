@@ -1,4 +1,4 @@
-# /sec-kit install-pentagi
+# /security-kit install-pentagi
 
 Opt-in installation of the PentAGI autonomous penetration testing platform (by vxcontrol).
 
@@ -47,7 +47,7 @@ Installing pentagi will:
   3. PentAGI itself runs as Docker containers — it does NOT modify your
      project's CLAUDE.md, settings, or hooks.
 
-Fully reversible via /sec-kit uninstall-pentagi.
+Fully reversible via /security-kit uninstall-pentagi.
 
 Continue? (yes/no)
 ```
@@ -65,7 +65,7 @@ Write `.claude/skills/pentagi/SKILL.md`:
 ```markdown
 ---
 name: pentagi
-description: Interact with the PentAGI autonomous penetration testing platform via its REST/GraphQL API. Use to create pentest flows, monitor execution, retrieve vulnerability reports, and manage the PentAGI deployment. Requires PentAGI to be running (deploy via /sec-kit install-pentagi).
+description: Interact with the PentAGI autonomous penetration testing platform via its REST/GraphQL API. Use to create pentest flows, monitor execution, retrieve vulnerability reports, and manage the PentAGI deployment. Requires PentAGI to be running (deploy via /security-kit install-pentagi).
 license: MIT
 metadata:
   author: vxcontrol
@@ -275,7 +275,7 @@ Quick commands:
 The 'pentagi' skill is now available in .claude/skills/pentagi/
 Use it to create pentest flows, monitor execution, and retrieve reports via API.
 
-To remove: /sec-kit uninstall-pentagi
+To remove: /security-kit uninstall-pentagi
 ```
 
 ### Step 7 — Alert on missing dependencies

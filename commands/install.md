@@ -1,4 +1,4 @@
-# /sec-kit install [variant]
+# /security-kit install [variant]
 
 Install a skill bundle into `.claude/skills/` of the current project. No hooks installed.
 
@@ -105,15 +105,15 @@ Installed variant 'full': 22 skills
   prompts: .security-kit/prompts/
   lockfile: .security-kit/installed.yaml
 
-Hooks: none installed. Use `/sec-kit install-hooks <name>` to opt in.
-Raptor: not installed. Use `/sec-kit install-raptor` to opt in.
+Hooks: none installed. Use `/security-kit install-hooks <name>` to opt in.
+Raptor: not installed. Use `/security-kit install-raptor` to opt in.
 
-Run `/sec-kit scan` to execute the installed skills, or `/sec-kit smart-scan` for a tailored prompt.
+Run `/security-kit scan` to execute the installed skills, or `/security-kit smart-scan` for a tailored prompt.
 ```
 
 ## Idempotence
 
-Re-running `/sec-kit install` with the same variant should be a no-op. Re-running with a different variant should replace symlinks to match the new variant (removing skills not in the new variant, adding skills newly required).
+Re-running `/security-kit install` with the same variant should be a no-op. Re-running with a different variant should replace symlinks to match the new variant (removing skills not in the new variant, adding skills newly required).
 
 Implementation: before adding symlinks, read the existing lockfile's `skills[]`. For each skill present in the old list but absent from the new manifest, delete its symlink. Then add/update per the new manifest.
 

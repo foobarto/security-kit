@@ -1,4 +1,4 @@
-# /sec-kit install-hexstrike
+# /security-kit install-hexstrike
 
 Opt-in installation of the HexStrike AI MCP server (by 0x4m4).
 
@@ -220,7 +220,7 @@ SOURCE_DIR="$SCRIPT_DIR/../source"
 
 if [ ! -d "$VENV" ]; then
   echo "ERROR: Virtual environment not found at $VENV"
-  echo "Run: /sec-kit install-hexstrike to set up"
+  echo "Run: /security-kit install-hexstrike to set up"
   exit 1
 fi
 
@@ -325,7 +325,7 @@ MCP client config:
   See .claude/skills/hexstrike/SKILL.md for Claude Desktop, VS Code Copilot,
   and Cursor integration snippets.
 
-To remove: /sec-kit uninstall-hexstrike
+To remove: /security-kit uninstall-hexstrike
 ```
 
 ### Step 8 — Alert on missing dependencies

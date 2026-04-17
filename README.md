@@ -6,11 +6,14 @@ A Claude Code skill that installs a curated bundle of third-party security revie
 
 Security review with Claude Code works best when the model has the right skills loaded for the task. `security-kit` does three things:
 
-1. **Installs curated skill bundles** into `.claude/skills/` of the current project, with variants for different needs (minimal, sec-review, threat-modeling, full).
+1. **Installs curated skill bundles** into `.claude/skills/` of the current project, with variants for different needs (minimal, sec-review, threat-modeling, cybersecurity, full).
 2. **Ships battle-tested prompts** for the common workflows (broad review, PR-diff triage, threat modeling, shell-string audit).
 3. **Orchestrates runs.** `/sec-kit scan` runs the installed skills in the correct sequence. `/sec-kit smart-scan` fingerprints the project first and curates a prompt tailored to its shape.
 
-Raptor (the offensive-security harness) is opt-in via `/sec-kit install-raptor` — it ships a SessionStart hook and overrides project-level `CLAUDE.md`, so it's kept separate from the default flow.
+Opt-in frameworks and platforms are kept separate from the default flow:
+- **Raptor** (`/sec-kit install-raptor`) — offensive-security harness with SessionStart hook and `/raptor-*` commands
+- **PentAGI** (`/sec-kit install-pentagi`) — autonomous pentesting platform (Go + React + Docker, 20+ built-in tools)
+- **HexStrike AI** (`/sec-kit install-hexstrike`) — MCP server exposing 150+ security tools to AI agents
 
 ## Quick start
 
@@ -33,12 +36,16 @@ For a project where you want Claude to pick the right skills itself:
 | Command | Purpose |
 |---|---|
 | `/sec-kit list` | List every skill the kit offers + what's currently installed in this project |
-| `/sec-kit install [variant]` | Install skills. Variants: `minimal`, `sec-review`, `threat-modeling`, `full` (default). No hooks. |
+| `/sec-kit install [variant]` | Install skills. Variants: `minimal`, `sec-review`, `threat-modeling`, `cybersecurity`, `full` (default). No hooks. |
 | `/sec-kit install-hooks <name...>` | Opt-in hook installer from a whitelist: `gh-cli`, `modern-python` |
 | `/sec-kit install-raptor` | Opt-in raptor framework. Installs SessionStart hook, `/raptor-*` commands, CLAUDE.md override. |
+| `/sec-kit install-pentagi` | Opt-in PentAGI autonomous pentesting platform. Docker Compose deploy + wrapper skill. |
+| `/sec-kit install-hexstrike` | Opt-in HexStrike AI MCP server. 150+ security tools via MCP protocol. |
 | `/sec-kit uninstall [variant]` | Remove installed skills. Default removes all sec-kit-managed skills. |
 | `/sec-kit uninstall-hooks <name...>` | Remove specified hooks |
 | `/sec-kit uninstall-raptor` | Remove raptor framework from the project |
+| `/sec-kit uninstall-pentagi` | Remove PentAGI wrapper and deployment files |
+| `/sec-kit uninstall-hexstrike` | Remove HexStrike wrapper and venv |
 | `/sec-kit scan` | Run all installed skills in the correct sequence against this project |
 | `/sec-kit smart-scan` | Fingerprint the project, then curate a scan prompt tailored to the project's shape |
 
@@ -49,6 +56,7 @@ For a project where you want Claude to pick the right skills itself:
 | `minimal` | 5 skills (the T6 chain): audit-context-building, variant-analysis, supply-chain-risk-auditor, insecure-defaults, fp-check | Quick adversarial review of a small/medium codebase |
 | `sec-review` | 13 skills: minimal + differential-review, semgrep-rule-creator, constant-time-analysis, zeroize-audit, codeql, semgrep, sarif-parsing, owasp-security | Standard security review workflow |
 | `threat-modeling` | 9 skills: tm-init, tm-threats, tm-drift, tm-full, tm-report, tm-verify, tm-compliance, tm-status, tm-tests | STRIDE/PASTA threat modeling, PR-drift detection |
+| `cybersecurity` | 54 curated skills from Anthropic-Cybersecurity-Skills: cloud security, threat hunting, malware analysis, IR, pentesting, web app security, network security, forensics, SOC ops, IAM, container security, DevSecOps, vuln management, phishing defense | AI-guided security operations and penetration testing |
 | `full` (default) | All 22: sec-review ∪ threat-modeling | General-purpose installation |
 
 Deliberately excluded from all variants:
@@ -56,6 +64,14 @@ Deliberately excluded from all variants:
 - `firebase-apk-scanner` — active internet scanner
 - fr33d3m0n's threat-modeling skill — ships a PostToolUse Write hook (use raptor's opt-in path if you want something similar)
 - Trail of Bits plugins with hooks (`gh-cli`, `modern-python`, `skill-improver`, `firebase-apk-scanner`, `second-opinion`) — opt-in via `install-hooks`
+
+## Opt-in frameworks
+
+| Framework | What it is | Install command |
+|---|---|---|
+| Raptor | Offensive-security harness with SessionStart hook, `/raptor-*` commands, CLAUDE.md override | `/sec-kit install-raptor` |
+| PentAGI | Autonomous pentesting platform (Go backend + React UI + Docker, 20+ built-in tools, multi-agent AI) | `/sec-kit install-pentagi` |
+| HexStrike AI | MCP server exposing 150+ security tools (nmap, nuclei, sqlmap, etc.) to AI agents via FastMCP | `/sec-kit install-hexstrike` |
 
 ## Where things live (XDG-compliant)
 
